@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "roboto";
+}
+
+html {
+  background-color: rgb(233, 233, 233);
+}
+
+:root {
+  --sidebar-bcgr: #0ea5e9; 
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./fonts/Roboto/Roboto-Regular.ttf");
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 5fr;
+}
+
+
+/*Sidebar */
+.sidebar {
+  background-color: var(--sidebar-bcgr);
+  grid-area: 1/ 1/ 3/ 2;
+}
+
+.sidebar > ul {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+li {
+  height: 2rem;
+}
+
+.sidebar > h2, 
+li {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.sidebar > h2 {margin-left: 2rem;}
+
+/*Header*/
+.header {
+  background-color: white;
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+
+
+/*Content*/
+.content {
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  padding: 2rem;
+  gap: 16px 0;
+}
+.content > div > div {background-color: white;}
+
+.projects {
+  grid-area: 1 / 1 / 3 / 2;
+  display: grid;
+  grid-template: 0.1fr repeat(3, 1fr) / repeat(2, 1fr);
+  gap: 16px 20px;
+  padding-right: 2rem;
+}
+.projects > h4 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.announcements {
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+
+.trending {
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
