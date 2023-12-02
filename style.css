@@ -37,6 +37,8 @@ html {
 
 li {
   height: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .sidebar > h2, 
@@ -88,4 +90,28 @@ li {
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
   grid-template-rows: 1fr 10fr;
+}
+
+/*Sidebar icon*/
+a, 
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+a > img {
+  position: relative;
+  top: 4px;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1rem;
+  filter: invert(99%) sepia(25%) saturate(2%) hue-rotate(16deg) brightness(108%) contrast(100%);
+}
+
+h2 > img {
+  position: relative;
+  top: 12px;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 12px;
+  filter: invert(99%) sepia(25%) saturate(2%) hue-rotate(16deg) brightness(108%) contrast(100%);
 }
