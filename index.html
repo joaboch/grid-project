@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <h2><img src="./images/view-dashboard.svg" alt="dashborad-icon">Dashboard</h2>
+      <h2><img id="dashboard-icon" src="./images/view-dashboard.svg" alt="dashborad-icon">Dashboard</h2>
 
       <ul>
         <li><a href=""><img src="./images/home.svg" alt="home-icon">Home</a></li>
@@ -30,16 +30,19 @@
       <div>
         <input type="text">
       </div>
-      <div>
-        <button>Notification</button>
-        <button>profile</button>
-        <h4 style="display: inline-block;">Morgan Oakley</h4>
+      <div  class="header-right">
+        <button id="notification-btn"></button>
+        <button id="profile-btn"></button>
+        <h4 id="profile-name">Joaboch</h4>
       </div>
       <div>
-        <h5>Hi there,</h5>
-        <h2>Morgan Oakley (@morgan)</h2>
+        <img id="profile-image" src="../../../Desktop/Images/641968.jpg" alt="profile-image">
+        <div class="profile-greeting">
+          <h5>Hi there,</h5>
+          <h2>Joaquin Boch (@Joaboch)</h2>
+        </div>
       </div>
-      <div>
+      <div class="opt-btns">
         <button>New</button>
         <button>Upload</button>
         <button>Share</button>
