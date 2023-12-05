@@ -5,11 +5,12 @@
 }
 
 html {
-  background-color: rgb(233, 233, 233);
+  background-color: var(--bkgr-color);
 }
 
 :root {
-  --sidebar-bcgr: #0ea5e9; 
+  --sidebar-bcgr: #0ea5e9;
+  --bkgr-color: #e5e7eb;
 }
 
 @font-face {
@@ -55,8 +56,8 @@ li {
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template: 1fr 1fr / 1.5fr 1fr;
-  padding-left: 3rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 3rem 0 3rem;
+  box-shadow: 2px 1px 5px gray;
 }
 
 input {
@@ -66,7 +67,7 @@ input {
   padding-left: 2rem;
   margin-top: 2px;
   border: none;
-  background: url("./images/magnify.svg") no-repeat rgb(233, 233, 233);
+  background: url("./images/magnify.svg") no-repeat var(--bkgr-color);
 }
 
 #notification-btn,
@@ -93,7 +94,8 @@ input {
 }
 
 #notification-btn:hover,
-#profile-btn:hover {box-shadow: 0 0 0 3px  #fcd34d;}
+#profile-btn:hover,
+.opt-btns > button:hover {box-shadow: 0 0 0 3px  #fcd34d;}
 
 #profile-name {
   display: inline-block;
@@ -102,10 +104,10 @@ input {
 }
 
 .header-right {
-  display: flex;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  justify-content: end;
   margin-left: 5rem;
-  gap: 3rem;
 }
 
 #profile-image {
@@ -124,8 +126,10 @@ input {
 
 
 .opt-btns {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  justify-items: right;
+  justify-content: end;
 }
 
 .opt-btns > button {
@@ -160,6 +164,25 @@ input {
   grid-area: 1 / 1 / 2 / 3;
 }
 
+.card {
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  padding: 2rem 0 0 2rem;
+  background: linear-gradient(
+        to right,
+        #fde047 0%,
+        #fde047 2%,
+        white 2%,
+        white 100%
+    );
+}
+
+.content-text > p {
+  color: grey;
+  font-weight: 300;
+}
+
 .announcements {
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
@@ -171,6 +194,11 @@ input {
   display: grid;
   grid-template-rows: 1fr 10fr;
 }
+
+
+
+
+
 
 /*Sidebar icon*/
 a, 
